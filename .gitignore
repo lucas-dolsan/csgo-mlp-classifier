@@ -1,1 +1,3 @@
-trained_classifiers/
+trained_classifiers/*
+
+!trained_classifiers/.gitkeep 
