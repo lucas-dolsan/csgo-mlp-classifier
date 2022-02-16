@@ -13,10 +13,10 @@ VERBOSE=True
 # Especifica o nome de um arquivo de classifier pré-treinado, se o arquivo não existir, o script irá 
 # treinar um novo usando os parâmetros definidos, e salvará num arquivo com o nome especificado.
 #Contido dentro da pasta trained-classifiers
-CLASSIFIER_FILE = 'v49.pkl'
+CLASSIFIER_FILE = 'v7.pkl'
 #nome do dataset a ser utilizado, contido dentro da pasta de datasets
-DATASET_FILE = 'small_dataset.csv'
-# Se vai embaralhar ou não os dados lidos apartir do CSV
+DATASET_FILE = 'medium_dataset.csv'
+# Se vai embaralhar ou não os dados lidos do CSV
 SHUFFLE=True
 # Se deve ou não mostrar a matriz de confusão
 # numa janela do matplotlib (independente do caso o resultado sairá , stdout do script)
@@ -108,10 +108,10 @@ def preprocess_dataset(dataset):
 
 # essa função vai retornar um classifier treinado de acordo com os parâmetros especificados
 def run_training(x_train, y_train):
-    max_iter = x_train.shape[0]
+    max_iter = 5 * x_train.shape[0]
     # max_iter = 500
     batch_size = 'auto'
-    hidden_layer_sizes=()
+    hidden_layer_sizes=(97)
 
     if VERBOSE:
       print(f'training... ({CLASSIFIER_FILE})')
@@ -177,7 +177,7 @@ def print_metrics(x_tes, y_test, y_pred, classifier, metrics):
       cmap=plt.cm.Blues,
       normalize='true' if NORMALIZE_CONFUSION_MATRIX else None,
   )
-  title = "Normalized confusion matrix"
+  title = "confusion matrix"
 
   confusion_matrix_display.ax_.set_title(title)
 
@@ -223,6 +223,7 @@ else:
 
 if VERBOSE:
   print('testing...')
+
 y_pred = classifier.predict(x_test)
 metrics = build_metrics(x_test, y_test, y_pred, classifier)
 print_metrics(x_test, y_test, y_pred, classifier, metrics)
