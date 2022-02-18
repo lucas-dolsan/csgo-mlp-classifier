@@ -8,7 +8,7 @@ parameters = {
   "learning_rate": "constant",
   "learning_rate_init": 0.001,
   "power_t": 0.5,
-  "max_iter": 5000,
+  "max_iter": 100000,
   "shuffle": True,
   "random_state": None,
   "tol": 1e-4,

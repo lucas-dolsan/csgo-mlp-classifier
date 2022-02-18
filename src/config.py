@@ -9,9 +9,11 @@
 DATASET_TESTING_SIZE=0.33
 # habilita logs do progresso do script
 VERBOSE=True
+#se deve ou não printar os parametros usados no treinamento
+SHOW_TRAINING_PARAMETERS=False
 
 #nome do dataset a ser utilizado, contido dentro da pasta de datasets
-DATASET_FILE = 'small_dataset.csv'
+DATASET_FILE = 'full_dataset.csv'
 # Se vai embaralhar ou não os dados lidos do CSV
 SHUFFLE_DATASET=True
 # Se deve ou não mostrar a matriz de confusão

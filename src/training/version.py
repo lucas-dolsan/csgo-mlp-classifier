@@ -2,8 +2,8 @@ import os
 from sklearn.neural_network import MLPClassifier
 from pathlib import Path
 from misc import serializer
+import config
 import json
-
 
 class Version:
   def __init__(
@@ -21,10 +21,15 @@ class Version:
     self.metrics = metrics
 
   def save(self):
-    folder_version=f'versions/{self.version_name}-{self.used_dataset}'
+    full_version_name = f'{self.version_name}-{self.used_dataset.replace(".csv", "")}'
+    
+    if config.VERBOSE:
+      print(f'saving version... ({full_version_name})')
+
+    folder_version=f'versions/{full_version_name}'
 
     if os.path.isdir(folder_version):
-      raise f'Version {self.version_name} already exists'
+      raise Exception(f'Version {full_version_name} already exists')
 
     # cria o folder da version
     Path(folder_version).mkdir(parents=True, exist_ok=True)

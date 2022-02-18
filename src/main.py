@@ -12,7 +12,7 @@ def train_classifier(version_name, parameters):
   
   x_train, x_test, y_train, y_test = DatasetHandler.organize_dataset(x,y)
 
-  trained_mlp_classifier = Trainer.run_training(parameters, x_train, y_train)
+  trained_mlp_classifier = Trainer.run_training(version_name, parameters, x_train, y_train)
 
   metrics = build_metrics(
     x_test,
@@ -33,4 +33,4 @@ def train_classifier(version_name, parameters):
 
 
 for version_name, parameters in enumerate(training_plan):
-  train_classifier(version_name, parameters)
+  train_classifier(f'v{version_name}', parameters)

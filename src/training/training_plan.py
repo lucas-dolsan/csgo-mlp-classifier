@@ -27,4 +27,48 @@ training_plan = [
     **parameters,
     'hidden_layer_sizes': (100)
   },
+  {
+    **parameters,
+    'hidden_layer_sizes': (30, 30)
+  },
+  {
+    **parameters,
+    'hidden_layer_sizes': (180, 30)
+  },
+  {
+    **parameters,
+    'hidden_layer_sizes': (60, 30)
+  },
+  {
+    **parameters,
+    'hidden_layer_sizes': (120, 30)
+  },
+  {
+    **parameters,
+    'hidden_layer_sizes': (90, 30)
+  },
+  {
+    **parameters,
+    'hidden_layer_sizes': (100, 30)
+  },
+    {
+    **parameters,
+    'hidden_layer_sizes': (100, 30)
+  },
+  {
+    **parameters,
+    'hidden_layer_sizes': (100, 30),
+    'activation': 'tanh'
+  },
+  {
+    **parameters,
+    'hidden_layer_sizes': (100, 30),
+    'activation': 'tanh',
+    'learning_rate': 'invscaling'
+  },
+  {
+    **parameters,
+    'hidden_layer_sizes': (100, 30),
+    'learning_rate': 'invscaling'
+  },
 ]
