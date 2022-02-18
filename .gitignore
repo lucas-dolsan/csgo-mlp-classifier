@@ -1,3 +1,5 @@
-trained_classifiers/*
+versions/*
 
-!trained_classifiers/.gitkeep 
+!versions/.gitkeep 
+
+__pycache__/

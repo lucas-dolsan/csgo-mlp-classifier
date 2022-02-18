@@ -30,11 +30,7 @@ A estrutura da rede em questão segue o seguinte modelo:
 
 ![ANN MLP Binary Classifier](screenshots/mlp-binary-classifier.png)
 
-A camada de entrada possui um neurônio para cada característica de um registro do dataset, ou seja, para cada coluna do dataset, portanto são 97 neurônios de entrada.
-
-A camada oculta de um MLP pode possuir uma quantidade arbitrária de camadas, e da mesma forma, cada camada pode possuir uma quantidade qualquer de neurônios.
-
-A camada de saída também pode possuir uma quantidade arbitrária de neurônios, porém, no caso dessa implementação, pelo fato do objetivo da rede ser um classificador binário, essa camada possuirá somente dois neurônios.
+A camada de entrada possui um neurônio para cada característica de um registro do dataset, ou seja, para cada coluna do dataset, portanto são 96 neurônios de entrada.
 
 ### Métricas de avaliação
 
@@ -75,7 +71,7 @@ Essas variáveis estão definidas no topo do arquivo **classifier.py**:
 
     **Dica:** Você pode redirecionar o *stdout* da execução do **classifier.py** para um arquivo de texto, para armazenar quais parâmetros foram usados no treinamento do classificador, e quais foram os resultados das métricas.
 
-    eg.: ```python3 classifiers.py > output.txt```
+    eg.: ```python3 ./src/classifiers.py > output.txt```
 
 
 - ```DATASET_FILE```
