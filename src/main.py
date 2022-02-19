@@ -1,7 +1,7 @@
 from dataset.dataset_handler import DatasetHandler
 from training.trainer import Trainer
 from training.training_parameters import parameters
-from evaluation.metrics import build_metrics
+from evaluation.evaluation import evaluate_classifier 
 from training.version import Version
 from training.training_plan import training_plan
 import config
@@ -14,12 +14,7 @@ def train_classifier(version_name, parameters):
 
   trained_mlp_classifier = Trainer.run_training(version_name, parameters, x_train, y_train)
 
-  metrics = build_metrics(
-    x_test,
-    y_test,
-    trained_mlp_classifier.predict(x_test),
-    trained_mlp_classifier
-  )
+  metrics = evaluate_classifier(x_test, y_test, trained_mlp_classifier)
 
   version = Version(
     version_name=version_name,
@@ -31,6 +26,8 @@ def train_classifier(version_name, parameters):
 
   version.save()
 
+# Maior numero de versão existente 
+latest_version=-1
 
-for version_name, parameters in enumerate(training_plan):
-  train_classifier(f'v{version_name}', parameters)
+for version, parameters in enumerate(training_plan):
+  train_classifier(f'v{version + latest_version + 1}', parameters)

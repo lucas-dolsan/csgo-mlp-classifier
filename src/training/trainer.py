@@ -12,7 +12,7 @@ class Trainer:
   def run_training(version_name, parameters, x_train=None, y_train=None) -> MLPClassifier:
 
       if config.VERBOSE:
-        print('training...')
+        print(f'training... ({version_name})')
         if config.SHOW_TRAINING_PARAMETERS:
           _print_parameters(parameters)
 

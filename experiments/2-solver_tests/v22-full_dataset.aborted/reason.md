@@ -1,0 +1,1 @@
+solver lbfgs levou tempo demais, descartado

@@ -1,12 +1,15 @@
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precision_score, recall_score
 from sklearn.model_selection import cross_val_score
 import numpy as np
+from sklearn.neural_network import MLPClassifier
 import config
 
-def build_metrics(x_test, y_test, y_pred, classifier):
+def evaluate_classifier(x_test, y_test, classifier: MLPClassifier):
   if config.VERBOSE:
     print('building metrics...')
 
+  y_pred = classifier.predict(x_test)
+    
   accuracy = accuracy_score(y_test, y_pred)
   precision = precision_score(y_test, y_pred, average="weighted")
   recall = recall_score(y_test, y_pred, average='binary', pos_label=config.POSITIVE_LABEL)
