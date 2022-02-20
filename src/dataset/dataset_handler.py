@@ -27,7 +27,6 @@ class DatasetHandler:
       # pois a última coluna ('round_winner') armazena o resultado de cada rodada
       x = dataset[dataset.columns[:-1]]
 
-      # TODO review
       x = StandardScaler().fit_transform(x)
 
       # resultado de qual time (CT ou TR) venceu a rodada

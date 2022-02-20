@@ -5,6 +5,10 @@ from training.training_parameters import parameters
 training_plan = [
   {
     **parameters,
-    "max_iter": 150000,
+    "solver": 'sgd',
+  },
+    {
+    **parameters,
+    "solver": 'adam',
   }
 ]

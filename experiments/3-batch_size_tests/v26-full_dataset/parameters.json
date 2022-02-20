@@ -3,7 +3,7 @@
   "activation": "relu",
   "solver": "adam",
   "alpha": 0.0001,
-  "batch_size": 350,
+  "batch_size": 200,
   "learning_rate": "constant",
   "learning_rate_init": 0.001,
   "power_t": 0.5,
