@@ -94,7 +94,7 @@ Essa configuração está no primeiro grupo de testes, todos os testes realizado
 
 #### Camadas ocultas:
 Configurações utilizadas:
- - Uma camada oculta, com 30 neurônios; **(v0-full_dataset)**;
+ - Uma camada oculta, com 30 neurônios **(v0-full_dataset)**;
 ```
 "accuracy": 0.77,
 "precision": 0.77,
@@ -114,7 +114,7 @@ Configurações utilizadas:
     [5068, 15556]
 ]
 ```
- - Uma camada oculta, com 180 neurônios; **(v1-full_dataset)**;
+ - Uma camada oculta, com 180 neurônios **(v1-full_dataset)**;
 ```
 "accuracy": 0.81,
 "precision": 0.81,
@@ -134,7 +134,7 @@ Configurações utilizadas:
     [3735, 16881]
 ]
 ```
- - Uma camada oculta, com 60 neurônios; **(v2-full_dataset)**;
+ - Uma camada oculta, com 60 neurônios **(v2-full_dataset)**;
 ```
 "accuracy": 0.79,
 "precision": 0.79,
@@ -154,7 +154,7 @@ Configurações utilizadas:
     [4623, 16018]
 ]
 ```
- - Uma camada oculta, com 120 neurônios; **(v3-full_dataset)**;
+ - Uma camada oculta, com 120 neurônios **(v3-full_dataset)**;
 ```
 "accuracy": 0.8,
 "precision": 0.8,
@@ -174,7 +174,7 @@ Configurações utilizadas:
     [3679, 16904]
 ]
 ```
- - Uma camada oculta, com 90 neurônios; **(v4-full_dataset)**;
+ - Uma camada oculta, com 90 neurônios **(v4-full_dataset)**;
 ```
 "accuracy": 0.79,
 "precision": 0.79,
@@ -194,7 +194,7 @@ Configurações utilizadas:
     [4353, 16173]
 ]
 ```
- - Uma camada oculta, com 180 neurônios; **(v5-full_dataset)**;
+ - Uma camada oculta, com 180 neurônios **(v5-full_dataset)**;
 ```
 "accuracy": 0.79,
 "precision": 0.8,
@@ -214,7 +214,7 @@ Configurações utilizadas:
     [5027, 15620]
 ]
 ```
- - Uma camada oculta, com 100 neurônios; **(v6-full_dataset)**;
+ - Uma camada oculta, com 100 neurônios **(v6-full_dataset)**;
 ```
 "accuracy": 0.78,
 "precision": 0.78,
@@ -705,9 +705,9 @@ Em todos os testes realizados, marginalmente, o melhor resultado foi com o solve
     ```
 Em todos os testes realizados, os resultados variaram marginalmente, portanto conclui-se que, nas configurações atuais, e para este problema específico, o tamanho de lote não implica em nenhuma mudança significativa no aprendizado do classificador.
 
-#### Conclusão do autor
+#### Conclusão
 Por coincidência ou por mérito dos desenvolvedores do **sklearn**, ou ambos - os parâmetros padrão definidos para o **MLPClassifier**
-mostraram-se em grande parte, os melhores encontrados para o problema em questão, com exceção da configuração de **camadas ocultas**, encontradas 14ª iteração da primeira 
+mostraram-se em grande parte, os melhores encontrados para o problema em questão, com exceção da configuração de **camadas ocultas**, encontrada na 14ª iteração da primeira 
 bateria de testes. O restante das permutações de parâmetros realizadas nas baterias de testes subsequentes obtiveram resultados piores, ou extremamente similares
 aos resultados encontrado pela combinação de parâmetros da versão **14**.
 
@@ -716,14 +716,15 @@ seguir premissas muito simples. O dataset, apesar de possuir 96 colunas com cara
 consideração uma infinidade de outros fatores, em especial os fatores da habilidade e sorte de cada jogador, e o quão grande a influência de um único indivíduo é para uma partida, quem dirá para uma única rodada.
 
 Isto posto, concluo que minha implementação sem dúvida não encontrou o melhor resultado possível, e que uma combinação de diferentes parâmetros,
-ou outro método inteiramente diferente de um MLP resultariam em um modelo com melhor desempenho para o dataset em questão. Porém, 
+ou outro método inteiramente diferente de um MLP resultariam em um modelo com melhor desempenho para o dataset utilizado. Porém, 
 com o dataset selecionado, não acredito que os resultados seriam substancialmente melhores, devido as características inerentes do problema 
 em questão.
 
 ### Instruções de uso do software
 
 Instale as dependências:
-  - Instale o python (versão utilizada durante o desenvolvimento: **Python 3.9.2**)
+  - Instale o Python (versão utilizada durante o desenvolvimento: **Python 3.9.2**)
+  - Instale o pip (Versão utilizada durante o desenvolvimento: **Pip 20.3.4**)
   - Instale as bibliotecas utilizadas:
       ```pip install pandas numpy matplotlib sklearn```          
 
