@@ -773,7 +773,7 @@ dentro de um diretório com o nome da versão em questão, que por sua vez cont�
     **Todos os resultados encontrados na implementação desse trabalho foram encontrados usando o dataset original.**
 
 ### Vídeo
-
+[Apresentação](https://drive.google.com/file/d/1SKXwFRTlkoV1zPyB8Eof-uQgT36ySGZX/view?usp=sharing)
 ### Referências
 
 
