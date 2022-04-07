@@ -713,7 +713,7 @@ aos resultados encontrado pela combinação de parâmetros da versão **14**.
 
 A respeito do problema em questão: CS:GO é um jogo que pode ser levado a um alto nível de complexidade estratégica e técnica, mas que não deixa de 
 seguir premissas muito simples. O dataset, apesar de possuir 96 colunas com características diferentes para uma rodada em questão, não leva em 
-consideração uma infinidade de outros fatores, em especial os fatores da habilidade e sorte de cada jogador, e o quão grande a influência de um único indivíduo é para uma partida, quem dirá para uma única rodada.
+consideração uma infinidade de outros fatores, em especial os fatores da habilidade e sorte de cada jogador, e o quão grande é a influência de um único indivíduo é para uma partida, quem dirá para uma única rodada.
 
 Isto posto, concluo que minha implementação sem dúvida não encontrou o melhor resultado possível, e que uma combinação de diferentes parâmetros,
 ou outro método inteiramente diferente de um MLP resultariam em um modelo com melhor desempenho para o dataset utilizado. Porém, 
