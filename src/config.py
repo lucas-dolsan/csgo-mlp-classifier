@@ -10,7 +10,7 @@ DATASET_TESTING_SIZE=0.33
 # habilita logs do progresso do script
 VERBOSE=True
 #se deve ou não printar os parametros usados no treinamento
-SHOW_TRAINING_PARAMETERS=False
+SHOW_TRAINING_PARAMETERS=True
 
 #nome do dataset a ser utilizado, contido dentro da pasta de datasets
 DATASET_FILE = 'full_dataset.csv'
